@@ -1,0 +1,23 @@
+<div>
+  <li>
+    <a href="">跳转hello</a>
+  </li>
+  <li>
+    <a href="/tabB/77">跳转B</a>
+  </li>
+  <li>
+    <button (click)="tabA()">跳转A</button>
+  </li>
+  <li>
+    <!-- 传递路由参数推荐 -->
+    <button (click)="tabC()">跳转C</button>
+  </li>
+
+  {{name}} - {{age}}
+
+  <!-- <app-hello></app-hello> -->
+  <!-- <app-a></app-a> -->
+  <!-- <app-b></app-b> -->
+  <router-outlet></router-outlet>
+
+</div>

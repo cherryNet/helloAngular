@@ -1,0 +1,13 @@
+<img class="imgs" *ngFor="let item of goodsArr" [src]="item.img" alt="">
+
+<hr>
+<div style="display:flex; align-items:center;" *ngIf="myname.length">
+    头像:<img style="width: 50px; border-radius: 50%;" [src]="avatar" alt="">
+    用户名：{{myname}}
+</div>
+
+<form [formGroup]="loginForm" action="" *ngIf="!myname.length">
+    账号：<input type="text" formControlName="username">
+    密码：<input type="password" formControlName="password">
+    <button (click)="loginClik()">登录</button>
+</form>

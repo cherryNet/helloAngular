@@ -1,0 +1,24 @@
+<hr>
+<h4>a组件</h4>
+年龄：<input type="text" [formControl]="age">
+<p>年龄：{{age.value}}</p>
+<button (click)="changeAge()">修改年龄为18</button>
+<hr>
+
+<!-- 动态表单控件组 -->
+<form [formGroup]="loginForm">
+    账号：<input type="text" formControlName="userName">
+    密码：<input type="password" formControlName="password">
+    <button (click)="loginClick()">提交</button>
+</form>
+
+<hr>
+<button (click)="fn()">date</button>
+<!-- 常用管道 -->
+日期：{{myDate | date:'yyyy-MM-dd HH:mm:ss'}}
+转大写：{{ 'abcdefg' | uppercase}}
+转小写：{{ 'ABCDEFG' | lowercase}}
+<hr>
+来自父组件的数据：{{name}}---{{myage}}
+<hr>
+<button (click)="sBtn()">点击吧数据传给父组件</button>

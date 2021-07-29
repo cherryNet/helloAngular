@@ -1,0 +1,23 @@
+<p>{{message}}</p>
+<input type="text" [value]="value" (input)="inputChange($event)">
+<p>{{value}}</p>
+<div [class] = "box">
+    <button (click)="swtFun($event)">切换</button>
+    {{ box == 'orange' ? '橙色' : '红色'}}
+</div>
+<div *ngIf="isShow">ngif</div>
+
+<ul>
+    <li *ngFor="let item of listArr; index as i">{{item}}--{{i}}</li>
+</ul>
+
+<hr>
+<!-- 数据双向绑定ngModel, 只对表单元素有效 需要在app.module.ts中引入FormsModule再挂载  -->
+<input #inp type="text" [(ngModel)]="value">
+<button (click)="btn2d(inp.value)">通过#获取input中的值</button>
+
+<hr>
+<p style="color:red">子组件的数据：{{sData}}</p>
+
+<!-- 给子组件传递数据 -->
+<app-a (addList)="pListFun($event)" [name]="pData" [myage]="18"></app-a>
