@@ -6,9 +6,15 @@ import { FormControl,FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-a',
   templateUrl: './a.component.html',
-  styleUrls: ['./a.component.sass']
+  styleUrls: ['./a.component.scss']
 })
 export class AComponent implements OnInit {
+
+  sites = [
+    {site : "Google", url : "http://www.google.com"},
+    {site : "Runoob", url : "http://www.runoob.com"},
+    {site : "Taobao", url : "http://www.taobao.com"}
+  ];
 
   myDate:Date = new Date();
 
@@ -37,7 +43,8 @@ export class AComponent implements OnInit {
   // 动态表单组
   loginForm = new FormGroup({
     userName: new FormControl(''),
-    password: new FormControl('')
+    password: new FormControl(''),
+    select: new FormControl(''),
   })
 
   changeAge() {
@@ -52,6 +59,7 @@ export class AComponent implements OnInit {
   }
 
   loginClick() {
+    console.log(this.loginForm.value)
     let {userName,password} = this.loginForm.value;
     console.log(`账号：${userName},密码：${password}`);
     

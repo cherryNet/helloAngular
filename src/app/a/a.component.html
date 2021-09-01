@@ -7,6 +7,12 @@
 
 <!-- 动态表单控件组 -->
 <form [formGroup]="loginForm">
+    
+    学校：<select class="myselect" formControlName="select">
+        <option value="">xxxxxxx</option>
+        <option [value]="item.url" *ngFor="let item of sites">{{item.site}}</option>
+    </select>
+    
     账号：<input type="text" formControlName="userName">
     密码：<input type="password" formControlName="password">
     <button (click)="loginClick()">提交</button>
