@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4201",
+    "start": "ng serve --port 4210",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -18,8 +18,10 @@
     "@angular/platform-browser": "~12.1.0-",
     "@angular/platform-browser-dynamic": "~12.1.0-",
     "@angular/router": "~12.1.0-",
+    "@juggle/resize-observer": "^3.3.1",
+    "echarts": "^5.2.0",
     "font-awesome": "^4.7.0",
-    "node-sass": "^4.14.1",
+    "ngx-echarts": "^7.0.2",
     "primeng": "^4.3.0",
     "rxjs": "^6.6.7",
     "rxjs-compat": "^6.6.7",
@@ -38,6 +40,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "resize-observer-polyfill": "^1.5.1",
     "typescript": "~4.3.2"
   }
 }

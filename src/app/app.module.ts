@@ -10,6 +10,9 @@ import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { CComponent } from './compoment/c/c.component';
 
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
+
 @NgModule({
   // 挂载组件模块
   declarations: [
@@ -26,6 +29,9 @@ import { CComponent } from './compoment/c/c.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxEchartsModule.forRoot({
+      echarts,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
